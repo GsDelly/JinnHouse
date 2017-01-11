@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3E807D21-AA20-4EF7-AEE4-5E04BF527C3A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JinnHouse.Entities.Interfaces</RootNamespace>
+    <AssemblyName>JinnHouse.Entities.Interfaces</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\Audio\IMusicControlable.cs" />
+    <Compile Include="Interfaces\Audio\IAudioDevice.cs" />
+    <Compile Include="Interfaces\Audio\IMusicDevice.cs" />
+    <Compile Include="Interfaces\Audio\IMusicSwitchable.cs" />
+    <Compile Include="Interfaces\Audio\IMusicSystem.cs" />
+    <Compile Include="Interfaces\Audio\ISong.cs" />
+    <Compile Include="Interfaces\Fan\IFanControlable.cs" />
+    <Compile Include="Interfaces\Fan\IFanDevice.cs" />
+    <Compile Include="Interfaces\Fan\IFanSystem.cs" />
+    <Compile Include="Interfaces\IBright.cs" />
+    <Compile Include="Interfaces\IBrightControllable.cs" />
+    <Compile Include="Interfaces\IBrightDevice.cs" />
+    <Compile Include="Interfaces\IBrightSystem.cs" />
+    <Compile Include="Interfaces\IDevice.cs" />
+    <Compile Include="Interfaces\ISwitchable.cs" />
+    <Compile Include="Interfaces\ITimerable.cs" />
+    <Compile Include="Interfaces\IVolume.cs" />
+    <Compile Include="Interfaces\IVolumeControlable.cs" />
+    <Compile Include="Interfaces\IVolumeMuteable.cs" />
+    <Compile Include="Interfaces\IVolumeDevice.cs" />
+    <Compile Include="Interfaces\IVolumeSystem.cs" />
+    <Compile Include="Interfaces\Oven\IOvenDevice.cs" />
+    <Compile Include="Interfaces\Temperature\ITemparatureDevice.cs" />
+    <Compile Include="Interfaces\Temperature\ITemperature.cs" />
+    <Compile Include="Interfaces\Temperature\ITemperatureControlable.cs" />
+    <Compile Include="Interfaces\Video\IChannel.cs" />
+    <Compile Include="Interfaces\Video\IChannelControlable.cs" />
+    <Compile Include="Interfaces\Video\IChannelDevice.cs" />
+    <Compile Include="Interfaces\Video\IChannelSystem.cs" />
+    <Compile Include="Interfaces\Web\IConnectable.cs" />
+    <Compile Include="Interfaces\Web\IWebDevice.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JinnHouse.Entities.Enum\JinnHouse.Entities.Enum.csproj">
+      <Project>{1B0FA943-1F06-431E-A843-99F83DEF16BB}</Project>
+      <Name>JinnHouse.Entities.Enum</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

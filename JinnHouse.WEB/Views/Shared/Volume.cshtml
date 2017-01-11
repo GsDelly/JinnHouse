@@ -1,0 +1,41 @@
+﻿@model JinnHouse.Entities.Interfaces.Interfaces.IVolumeDevice
+@if (Model != null)
+{
+    <div class="row widget widget-body">
+        <a href="/Volume/VolumeDown/@Model.Name/@ViewContext.RouteData.Values["action"]/@ViewContext.RouteData.Values["controller"]">
+            <img src="~/Content/icons/24px-minus.png" class="range-control" />
+        </a>
+        @if (Model.IsOn)
+        {
+            if (Model.VolumeSystem.Volume == 0)
+            {
+                <img src="~/Content/icons/tv/64px-vol-0.png" class="widget-icon" />
+            }
+            else if (Model.VolumeSystem.Volume <= 25)
+            {
+                <img src="~/Content/icons/tv/64px-vol-25.png" class="widget-icon" />
+            }
+            else if (Model.VolumeSystem.Volume <= 50)
+            {
+                <img src="~/Content/icons/tv/64px-vol-50.png" class="widget-icon" />
+            }
+            else if (Model.VolumeSystem.Volume <= 75)
+            {
+                <img src="~/Content/icons/tv/64px-vol-75.png" class="widget-icon" />
+            }
+            else if (Model.VolumeSystem.Volume <= 100)
+            {
+                <img src="~/Content/icons/tv/64px-vol-100.png" class="widget-icon" />
+            }
+        }
+        else
+        {
+            <img src="~/Content/icons/tv/64px-vol-off.png" class="widget-icon" />
+        }
+        <label class="widget-text">@Model.VolumeSystem.Volume</label>
+        <a href="/Volume/VolumeUp/@Model.Name/@ViewContext.RouteData.Values["action"]/@ViewContext.RouteData.Values["controller"]">
+            <img src="~/Content/icons/24px-plus.png" class="range-control" />
+        </a>
+    </div>
+}
+

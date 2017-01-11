@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - JinnHouse Application</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/widgets.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/custom.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/custom.js"></script>
+</head>
+<body>
+    <div id="dialog-overlay"></div>
+    <div id="dialog-container">
+        <div>
+            <div id="dialog-head"></div>
+            <div id="dialog-body">
+                <input id="prompt_value" />
+            </div>
+            <div id="dialog-foot">
+                <button id="ok-btn">OK</button>
+                <button id="cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row text-center">
+            <img src="~/Content/icons/house.png">
+            <span id="first-part">Jinn</span><span id="second-part"> House</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div id="menu-header" class="col-md-4">Devices</div>
+            <div class="col-md-1 separator"></div>
+            <div id="devices-header" class="col-md-7">
+                <div class="row">
+                    <div class="col-md-offset-10 col-sm-offset-10 col-xs-offset-10 text-center">
+                        <a href="/Home/Index" id="home-button">
+                            <img src="~/Content/icons/64px-house-icon.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <ul class="nav nav-list">
+                    <li>@Html.ActionLink("AudioSystems", "Index", "AudioSystems", null, new { @class = "menu-item head-item" })</li>
+                    <li>@Html.ActionLink("Ovens", "Index", "Ovens", null, new { @class = "menu-item" })</li>
+                    <li>@Html.ActionLink("Routers", "Index", "Routers", null, new { @class = "menu-item" })</li>
+                    <li>@Html.ActionLink("TVs", "Index", "TVs", null, new { @class = "menu-item" })</li>
+                    <li>@Html.ActionLink("Conditioners", "Index", "Conditioners", null, new { @class = "menu-item foot-item" })</li>
+                </ul>
+            </div>
+            <div class="col-md-1 separator"></div>
+            <div class="col-md-7">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/main.js"></script>
+</body>
+</html>

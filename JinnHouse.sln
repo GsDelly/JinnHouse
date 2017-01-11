@@ -1,0 +1,91 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JinnHouse.DAL", "JinnHouse.DAL\JinnHouse.DAL.csproj", "{2D28D3E0-ACB5-488A-8DE4-47C33AB215A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JinnHouse.BLL", "JinnHouse.BLL\JinnHouse.BLL.csproj", "{D712410F-5D85-4CCC-AB54-D1E1ABAE0800}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2D28D3E0-ACB5-488A-8DE4-47C33AB215A6} = {2D28D3E0-ACB5-488A-8DE4-47C33AB215A6}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JinnHouse.WEB", "JinnHouse.WEB\JinnHouse.WEB.csproj", "{E0D5B4EE-226A-43D0-9555-F3A587710C57}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D712410F-5D85-4CCC-AB54-D1E1ABAE0800} = {D712410F-5D85-4CCC-AB54-D1E1ABAE0800}
+		{3E807D21-AA20-4EF7-AEE4-5E04BF527C3A} = {3E807D21-AA20-4EF7-AEE4-5E04BF527C3A}
+		{FFED20B5-AE9E-4C2A-82C9-4EC737657CDC} = {FFED20B5-AE9E-4C2A-82C9-4EC737657CDC}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JinnHouse.Entities", "JinnHouse.Entities\JinnHouse.Entities.csproj", "{FFED20B5-AE9E-4C2A-82C9-4EC737657CDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{E107569A-85B4-40DC-9B0C-08848BC5664E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JinnHouse.DAL.Interfaces", "JinnHouse.DAL.Interfaces\JinnHouse.DAL.Interfaces.csproj", "{A6E6DDA2-0F98-471E-B7F8-DC2EA7E71213}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{3F6808E1-098F-43DD-907B-4A35616B07A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JinnHouse.BLL.Interfaces", "JinnHouse.BLL.Interfaces\JinnHouse.BLL.Interfaces.csproj", "{D7C10B7F-5437-48CE-A51E-90556F90CA99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JinnHouse.Entities.Interfaces", "JinnHouse.Entities.Interfaces\JinnHouse.Entities.Interfaces.csproj", "{3E807D21-AA20-4EF7-AEE4-5E04BF527C3A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1B0FA943-1F06-431E-A843-99F83DEF16BB} = {1B0FA943-1F06-431E-A843-99F83DEF16BB}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enums", "Enums", "{279DF6E4-BAEA-4B21-A474-D246D97B057B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JinnHouse.Entities.Enum", "JinnHouse.Entities.Enum\JinnHouse.Entities.Enum.csproj", "{1B0FA943-1F06-431E-A843-99F83DEF16BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D28D3E0-ACB5-488A-8DE4-47C33AB215A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D28D3E0-ACB5-488A-8DE4-47C33AB215A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D28D3E0-ACB5-488A-8DE4-47C33AB215A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D28D3E0-ACB5-488A-8DE4-47C33AB215A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D712410F-5D85-4CCC-AB54-D1E1ABAE0800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D712410F-5D85-4CCC-AB54-D1E1ABAE0800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D712410F-5D85-4CCC-AB54-D1E1ABAE0800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D712410F-5D85-4CCC-AB54-D1E1ABAE0800}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0D5B4EE-226A-43D0-9555-F3A587710C57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0D5B4EE-226A-43D0-9555-F3A587710C57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0D5B4EE-226A-43D0-9555-F3A587710C57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0D5B4EE-226A-43D0-9555-F3A587710C57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFED20B5-AE9E-4C2A-82C9-4EC737657CDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFED20B5-AE9E-4C2A-82C9-4EC737657CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFED20B5-AE9E-4C2A-82C9-4EC737657CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFED20B5-AE9E-4C2A-82C9-4EC737657CDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E107569A-85B4-40DC-9B0C-08848BC5664E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E107569A-85B4-40DC-9B0C-08848BC5664E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E107569A-85B4-40DC-9B0C-08848BC5664E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E107569A-85B4-40DC-9B0C-08848BC5664E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6E6DDA2-0F98-471E-B7F8-DC2EA7E71213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6E6DDA2-0F98-471E-B7F8-DC2EA7E71213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6E6DDA2-0F98-471E-B7F8-DC2EA7E71213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6E6DDA2-0F98-471E-B7F8-DC2EA7E71213}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7C10B7F-5437-48CE-A51E-90556F90CA99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7C10B7F-5437-48CE-A51E-90556F90CA99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7C10B7F-5437-48CE-A51E-90556F90CA99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7C10B7F-5437-48CE-A51E-90556F90CA99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E807D21-AA20-4EF7-AEE4-5E04BF527C3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E807D21-AA20-4EF7-AEE4-5E04BF527C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E807D21-AA20-4EF7-AEE4-5E04BF527C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E807D21-AA20-4EF7-AEE4-5E04BF527C3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B0FA943-1F06-431E-A843-99F83DEF16BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B0FA943-1F06-431E-A843-99F83DEF16BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B0FA943-1F06-431E-A843-99F83DEF16BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B0FA943-1F06-431E-A843-99F83DEF16BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A6E6DDA2-0F98-471E-B7F8-DC2EA7E71213} = {3F6808E1-098F-43DD-907B-4A35616B07A2}
+		{D7C10B7F-5437-48CE-A51E-90556F90CA99} = {3F6808E1-098F-43DD-907B-4A35616B07A2}
+		{3E807D21-AA20-4EF7-AEE4-5E04BF527C3A} = {3F6808E1-098F-43DD-907B-4A35616B07A2}
+		{1B0FA943-1F06-431E-A843-99F83DEF16BB} = {279DF6E4-BAEA-4B21-A474-D246D97B057B}
+	EndGlobalSection
+EndGlobal

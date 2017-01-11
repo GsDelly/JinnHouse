@@ -1,0 +1,7 @@
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnSports.BLL.Dto\bin\Debug\JinnSports.BLL.Dto.dll
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnSports.BLL.Dto\bin\Debug\JinnSports.BLL.Dto.pdb
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnSports.BLL.Dto\bin\Debug\JinnHouse.BLL.Dto.Interfaces.dll
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnSports.BLL.Dto\bin\Debug\JinnHouse.BLL.Dto.Interfaces.pdb
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnSports.BLL.Dto\obj\Debug\JinnSports.BLL.Dto.csprojResolveAssemblyReference.cache
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnSports.BLL.Dto\obj\Debug\JinnSports.BLL.Dto.dll
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnSports.BLL.Dto\obj\Debug\JinnSports.BLL.Dto.pdb

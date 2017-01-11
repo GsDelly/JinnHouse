@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7C10B7F-5437-48CE-A51E-90556F90CA99}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JinnHouse.BLL.Interfaces</RootNamespace>
+    <AssemblyName>JinnHouse.BLL.Interfaces</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\Features\IBrightService.cs" />
+    <Compile Include="Interfaces\Features\IChannelService.cs" />
+    <Compile Include="Interfaces\Features\IFanService.cs" />
+    <Compile Include="Interfaces\Features\ISongService.cs" />
+    <Compile Include="Interfaces\Features\ITemperatureService.cs" />
+    <Compile Include="Interfaces\Features\IVolumeService.cs" />
+    <Compile Include="Interfaces\IAudioSystemService.cs" />
+    <Compile Include="Interfaces\IConditionerService.cs" />
+    <Compile Include="Interfaces\IOvenService.cs" />
+    <Compile Include="Interfaces\IRouterService.cs" />
+    <Compile Include="Interfaces\ITvService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JinnHouse.DAL.Interfaces\JinnHouse.DAL.Interfaces.csproj">
+      <Project>{A6E6DDA2-0F98-471E-B7F8-DC2EA7E71213}</Project>
+      <Name>JinnHouse.DAL.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JinnHouse.Entities.Interfaces\JinnHouse.Entities.Interfaces.csproj">
+      <Project>{3E807D21-AA20-4EF7-AEE4-5E04BF527C3A}</Project>
+      <Name>JinnHouse.Entities.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JinnHouse.Entities\JinnHouse.Entities.csproj">
+      <Project>{FFED20B5-AE9E-4C2A-82C9-4EC737657CDC}</Project>
+      <Name>JinnHouse.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

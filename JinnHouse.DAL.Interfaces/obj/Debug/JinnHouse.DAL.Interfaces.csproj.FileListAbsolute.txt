@@ -1,0 +1,5 @@
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.DAL.Interfaces\bin\Debug\JinnHouse.DAL.Interfaces.dll
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.DAL.Interfaces\bin\Debug\JinnHouse.DAL.Interfaces.pdb
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.DAL.Interfaces\obj\Debug\JinnHouse.DAL.Interfaces.dll
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.DAL.Interfaces\obj\Debug\JinnHouse.DAL.Interfaces.pdb
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.DAL.Interfaces\obj\Debug\JinnHouse.DAL.Interfaces.csprojResolveAssemblyReference.cache

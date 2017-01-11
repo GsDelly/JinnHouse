@@ -1,0 +1,49 @@
+.widget {
+    margin-left: 1px;
+    margin-right: 1px;
+    color:#ffffff;
+    text-shadow:0px 1px 0px #283966;
+}
+.widget-header {
+    background-color: #323E4C;
+    color: white;
+    font-family: monospace;
+    text-align: center;
+    font-size: 16pt;
+    margin-top: 10px;
+}
+.widget-body {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    box-shadow:inset 0px 1px 0px 0px #dcecfb;
+    background:linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+    border:2px solid #84bbf3;
+    background-color:#bddbfa;
+    text-shadow:0px 1px 0px #528ecc;
+}
+.widget-text {
+    font-size: 26pt;
+    vertical-align: -5px;
+}
+
+.widget-icon {
+    width: 23px;
+    height: 40px;
+}
+
+.widget-text-tv {
+    font-size: 20pt;
+}
+
+.range-control {
+    width: 20px;
+    height: 20px;
+}
+
+.on-button {
+    float: right;
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}

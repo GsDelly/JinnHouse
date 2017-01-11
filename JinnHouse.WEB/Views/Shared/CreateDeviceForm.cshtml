@@ -1,0 +1,9 @@
+﻿<div class="alert alert-danger fade in error-message hidden">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Error!</strong> Device with this name are detected.
+</div>
+<input type="hidden" value="" id="deviceName" name="deviceName" />
+<input type="hidden" value="@ViewContext.RouteData.Values["action"]" name="actionName" id="actionName" />
+<input type="hidden" value="@ViewContext.RouteData.Values["controller"]" name="controllerName" id="controllerName" />
+<input type="submit" value="@ViewBag.ButtonTitle" class="addButton" />
+

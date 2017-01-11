@@ -1,0 +1,15 @@
+﻿@model JinnHouse.Entities.Interfaces.Interfaces.Video.IChannelDevice
+@if (Model != null)
+{
+    <div class="row widget widget-body">
+        <a href="/Channel/PreviousChannel/@Model.Name/@ViewContext.RouteData.Values["action"]/@ViewContext.RouteData.Values["controller"]">
+            <img src="~/Content/icons/tv/24px-prev-chanel.png" class="range-control" />
+        </a>
+        <span class="widget-text-tv">@Model.ChannelSystem.CurrentChannel</span>
+        <a href="/Channel/NextChannel/@Model.Name/@ViewContext.RouteData.Values["action"]/@ViewContext.RouteData.Values["controller"]">
+            <img src="~/Content/icons/tv/24px-next-chanel.png" class="range-control" />
+        </a>
+    </div>
+}
+
+

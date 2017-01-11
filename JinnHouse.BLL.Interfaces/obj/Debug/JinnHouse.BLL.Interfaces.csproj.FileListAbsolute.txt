@@ -1,0 +1,13 @@
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.BLL.Interfaces\bin\Debug\JinnHouse.BLL.Interfaces.dll
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.BLL.Interfaces\bin\Debug\JinnHouse.BLL.Interfaces.pdb
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.BLL.Interfaces\bin\Debug\JinnHouse.DAL.Interfaces.dll
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.BLL.Interfaces\bin\Debug\JinnHouse.Entities.dll
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.BLL.Interfaces\bin\Debug\JinnHouse.Entities.Interfaces.dll
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.BLL.Interfaces\bin\Debug\JinnHouse.Entities.Enum.dll
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.BLL.Interfaces\bin\Debug\JinnHouse.DAL.Interfaces.pdb
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.BLL.Interfaces\bin\Debug\JinnHouse.Entities.Interfaces.pdb
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.BLL.Interfaces\bin\Debug\JinnHouse.Entities.pdb
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.BLL.Interfaces\bin\Debug\JinnHouse.Entities.Enum.pdb
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.BLL.Interfaces\obj\Debug\JinnHouse.BLL.Interfaces.csprojResolveAssemblyReference.cache
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.BLL.Interfaces\obj\Debug\JinnHouse.BLL.Interfaces.dll
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.BLL.Interfaces\obj\Debug\JinnHouse.BLL.Interfaces.pdb

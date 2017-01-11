@@ -1,0 +1,56 @@
+﻿@using JinnHouse.Entities.Entities.Video;
+@using JinnHouse.Entities.Interfaces.Interfaces;
+@using JinnHouse.Entities.Interfaces.Interfaces.Video;
+@model IEnumerable<TV>
+@{
+    ViewBag.Title = "TV";
+    ViewBag.ButtonTitle = "Add new TV";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    @foreach (TV tv in Model)
+    {
+        <div class="col-md-4 col-sm-4">
+            <div class="row widget widget-header">
+                @if (Model is TV)
+                {
+                    <img src="~/Content/icons/16px-tv-icon.png" />
+                }
+                <label>@tv.Name</label>
+            </div>
+            @if (tv is IBrightDevice)
+            {
+                @Html.Partial("Bright", (IBrightDevice)tv)
+            }
+            @if (tv is IChannelDevice)
+            {
+                @Html.Partial("Channel", (IChannelDevice)tv)
+            }
+            @if (tv is IVolumeDevice)
+            {
+                @Html.Partial("Volume", (IVolumeDevice)tv)
+            }
+            <div class="row widget widget-body">
+                <div class="col-md-6 col-sm-6">
+                    @using (@Html.BeginForm("RemoveDevice", "TVs", FormMethod.Post))
+                {
+                        <input type="hidden" name="id" value="@tv.Id" />
+                        <input type="hidden" name="actionName" value="@ViewContext.RouteData.Values["action"]" />
+                        <input type="hidden" name="controllerName" value="@ViewContext.RouteData.Values["controller"]" />
+                        <input type="image" src="~/Content/icons/64px-delete-gray.png" class="on-button" alt="Delete" />
+                    }
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <a href="/TVs/Switch/@tv.Id/@ViewContext.RouteData.GetRequiredString("action")/@ViewContext.RouteData.GetRequiredString("controller")">
+                        <img class="on-button" src="@(tv.IsOn ? "/Content/icons/64px-onoff-red.png" : "/Content/icons/64px-onoff-white.png")" alt="On/Off" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<div class="row">
+    @Html.Partial("CreateDeviceForm")
+</div>
+
+

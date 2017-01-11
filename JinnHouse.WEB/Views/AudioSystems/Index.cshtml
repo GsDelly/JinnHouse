@@ -1,0 +1,59 @@
+﻿@using JinnHouse.Entities.Entities.Audio;
+@using JinnHouse.Entities.Interfaces.Interfaces;
+@using JinnHouse.Entities.Interfaces.Interfaces.Audio;
+@model IEnumerable<AudioSystem>
+
+@{
+    ViewBag.Title = "AudioSystem";
+    ViewBag.ButtonTitle = "Add new AudioSystem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    @foreach (AudioSystem audioSystem in Model)
+    {
+        <div class="col-md-4 col-sm-4">
+            <div class="row widget widget-header">
+                @if (audioSystem is AudioSystem)
+                {
+                    <img src="~/Content/icons/16px-cond-icon.png" />
+                }
+                <label>@audioSystem.Name</label>
+
+                @if (audioSystem is IMusicDevice)
+                {
+                    @Html.Partial("Song", (AudioSystem)audioSystem)
+                }
+
+                @if (audioSystem is IVolumeDevice)
+                {
+                    @Html.Partial("Volume", (IVolumeDevice)audioSystem)
+                }
+            </div>
+
+            <div class="row widget widget-body">
+                <div class="col-md-6 col-sm-6">
+                    @using (@Html.BeginForm("RemoveDevice", "AudioSystems", FormMethod.Post))
+                {
+                        <input type="hidden" name="id" value="@audioSystem.Id" />
+                        <input type="hidden" name="actionName" value="@ViewContext.RouteData.Values["action"]" />
+                        <input type="hidden" name="controllerName" value="@ViewContext.RouteData.Values["controller"]" />
+                        <input type="image" src="~/Content/icons/64px-delete-gray.png" class="on-button" alt="Delete" />
+                    }
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <a href="/AudioSystems/Switch/@audioSystem.Id/@ViewContext.RouteData.GetRequiredString("action")/@ViewContext.RouteData.GetRequiredString("controller")">
+                        <img class="on-button" src="@(audioSystem.IsOn ? "/Content/icons/64px-onoff-red.png" : "/Content/icons/64px-onoff-white.png")" alt="On/Off" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<div class="row">
+    @Html.Partial("CreateDeviceForm")
+</div>
+
+
+
+
+

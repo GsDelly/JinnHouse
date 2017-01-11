@@ -1,0 +1,32 @@
+﻿@using JinnHouse.Entities.Enums.Enums
+@model JinnHouse.Entities.Interfaces.Interfaces.IBrightDevice
+@if (Model != null)
+{
+    <div class="row widget widget-body">
+        <a href="/Bright/BrightDown/@Model.Name/@ViewContext.RouteData.GetRequiredString("action")/@ViewContext.RouteData.GetRequiredString("controller")">
+            <img src="~/Content/icons/24px-minus.png" alt="Increase brightness" />
+        </a>
+        @if (Model.IsOn)
+        {
+            switch (Model.BrightSystem.BrightLevel)
+            {
+                case BrightLevel.Low:
+                        <img src="~/Content/icons/tv/64px-bright-low.png" alt="Low brightness" />
+                        break;
+                case BrightLevel.Medium:
+                        <img src="~/Content/icons/tv/64px-bright-med.png" alt="Medium brightness" />
+                        break;
+                case BrightLevel.High:
+                        <img src="~/Content/icons/tv/64px-bright-high.png" alt="High brightness" />
+                        break;
+            }
+        }
+        else
+        {
+            <img src="~/Content/icons/tv/64px-bright-off.png" />
+        }
+        <a href="/Bright/BrightUp/@Model.Name/@ViewContext.RouteData.GetRequiredString("action")/@ViewContext.RouteData.GetRequiredString("controller")">
+            <img src="~/Content/icons/24px-plus.png" alt="Decrease brightness" />
+        </a>
+    </div>
+}

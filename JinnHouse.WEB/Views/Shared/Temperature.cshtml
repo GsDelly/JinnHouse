@@ -1,0 +1,28 @@
+﻿@model JinnHouse.Entities.Interfaces.Interfaces.Temperature.ITemperatureDevice
+@if (Model != null)
+{
+    <div class="row widget widget-body">
+        <a href="/Temperature/TempDown/@Model.Name/@ViewContext.RouteData.Values["action"]/@ViewContext.RouteData.Values["controller"]">
+            <img src="~/Content/icons/24px-minus.png" class="range-control" />
+        </a>
+        @if (Model.IsOn)
+        {
+            if (Model.Temperature <= Model.MinTemperature + 20)
+            {
+                <img src="~/Content/icons/temperature/64px-temp-blue.png" class="widget-icon" />
+            }
+            else
+            {
+                <img src="~/Content/icons/temperature/64px-temp-red.png" class="widget-icon" />
+            }
+        }
+        else
+        {
+            <img src="~/Content/icons/temperature/64px-temp-off.png" class="widget-icon" />
+        }
+        <label class="widget-text">@Model.Temperature°C</label>
+        <a href="/Temperature/TempUp/@Model.Name/@ViewContext.RouteData.Values["action"]/@ViewContext.RouteData.Values["controller"]">
+            <img src="~/Content/icons/24px-plus.png" class="range-control" />
+        </a>
+    </div>
+}

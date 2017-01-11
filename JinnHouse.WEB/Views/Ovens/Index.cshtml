@@ -1,0 +1,81 @@
+﻿@using JinnHouse.Entities.Entities;
+@using JinnHouse.Entities.Interfaces.Interfaces.Oven;
+@using JinnHouse.Entities.Interfaces.Interfaces.Temperature;
+@using JinnHouse.Entities.Enums.Enums;
+@model IEnumerable<Oven>
+
+@{
+    ViewBag.Title = "Oven";
+    ViewBag.ButtonTitle = "Add new Oven";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    @foreach (Oven oven in Model)
+    {
+        <div class="col-md-4 col-sm-4">
+            <div class="row widget widget-body">
+                <a href="/Ovens/SwitchModeForward/@oven.Id/@ViewContext.RouteData.Values["action"]/@ViewContext.RouteData.Values["controller"]">
+                    <img src="~/Content/icons/fanspeed/24px-down-arrow.png" class="range-control" />
+                </a>
+                @if (oven.IsOn)
+                {
+                    switch (oven.OvenMode)
+                    {
+                        case OvenModes.DeFrost:
+                            <img src="~/Content/icons/oven/64px-defrost-mode.png" />
+                            break;
+                        case OvenModes.Grill:
+                            <img src="~/Content/icons/oven/64px-grill-mode.gif" />
+                            break;
+                        case OvenModes.Microwave:
+                            <img src="~/Content/icons/oven/64px-svch-mode.png" />
+                            break;
+                        case OvenModes.Normal:
+                            <img src="~/Content/icons/oven/64px-normal-mode.png" />
+                            break;
+                        case OvenModes.Steam:
+                            <img src="~/Content/icons/oven/64px-steam-mode.png" />
+                            break;
+                    }
+                }
+                else
+                {
+                    <img src="~/Content/icons/ovens/64px-off-mode.png" />
+                }
+                <a href="/Ovens/SwitchModeBackward/@oven.Id/@ViewContext.RouteData.Values["action"]/@ViewContext.RouteData.Values["controller"]">
+                    <img src="~/Content/icons/fanspeed/24px-up-arrow.png" class="range-control" />
+                </a>
+            </div>
+
+            @if (oven is ITemperatureDevice)
+            {
+                @Html.Partial("Temperature", (ITemperatureDevice)oven)
+            }
+
+            <div class="row widget widget-body">
+                <div class="col-md-6 col-sm-6">
+                    @using (@Html.BeginForm("RemoveDevice", "Ovens", FormMethod.Post))
+                {
+                        <input type="hidden" name="id" value="@oven.Id" />
+                        <input type="hidden" name="actionName" value="@ViewContext.RouteData.Values["action"]" />
+                        <input type="hidden" name="controllerName" value="@ViewContext.RouteData.Values["controller"]" />
+                        <input type="image" src="~/Content/icons/64px-delete-gray.png" class="on-button" alt="Delete" />
+                    }
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <a href="/Ovens/Switch/@oven.Id/@ViewContext.RouteData.GetRequiredString("action")/@ViewContext.RouteData.GetRequiredString("controller")">
+                        <img class="on-button" src="@(oven.IsOn ? "/Content/icons/64px-onoff-red.png" : "/Content/icons/64px-onoff-white.png")" alt="On/Off" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<div class="row">
+    @Html.Partial("CreateDeviceForm")
+</div>
+
+
+
+
+

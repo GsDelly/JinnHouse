@@ -1,0 +1,57 @@
+﻿@using JinnHouse.Entities.Entities.Fan;
+@using JinnHouse.Entities.Interfaces.Interfaces.Fan;
+@using JinnHouse.Entities.Interfaces.Interfaces.Temperature;
+@model IEnumerable<Conditioner>
+
+@{
+    ViewBag.Title = "Conditioner";
+    ViewBag.ButtonTitle = "Add new Conditioner";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<div class="row">
+    @foreach (Conditioner conditioner in Model)
+    {
+        <div class="col-md-4 col-sm-4">
+            <div class="row widget widget-header">
+                @if (Model is Conditioner)
+                {
+                    <img src="~/Content/icons/16px-cond-icon.png" />
+                }
+                <label>@conditioner.Name</label>
+            </div>
+            @if (conditioner is IFanDevice)
+            {
+                @Html.Partial("Fan", (IFanDevice)conditioner)
+            }
+            @if (conditioner is ITemperatureDevice)
+            {
+                @Html.Partial("Temperature", (ITemperatureDevice)conditioner)
+            }
+           
+            <div class="row widget widget-body">
+                <div class="col-md-6 col-sm-6">
+                    @using (@Html.BeginForm("RemoveDevice", "Conditioners", FormMethod.Post))
+                {
+                        <input type="hidden" name="id" value="@conditioner.Id" />
+                        <input type="hidden" name="actionName" value="@ViewContext.RouteData.Values["action"]" />
+                        <input type="hidden" name="controllerName" value="@ViewContext.RouteData.Values["controller"]" />
+                        <input type="image" src="~/Content/icons/64px-delete-gray.png" class="on-button" alt="Delete" />
+                    }
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <a href="/Conditioners/Switch/@conditioner.Id/@ViewContext.RouteData.GetRequiredString("action")/@ViewContext.RouteData.GetRequiredString("controller")">
+                        <img class="on-button" src="@(conditioner.IsOn ? "/Content/icons/64px-onoff-red.png" : "/Content/icons/64px-onoff-white.png")" alt="On/Off" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<div class="row">
+    @Html.Partial("CreateDeviceForm")
+</div>
+
+
+
+
