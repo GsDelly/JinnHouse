@@ -1,5 +1,5 @@
 D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.Entities.Enum\bin\Debug\JinnHouse.Entities.Enum.dll
 D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.Entities.Enum\bin\Debug\JinnHouse.Entities.Enum.pdb
+D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.Entities.Enum\obj\Debug\JinnHouse.Entities.Enum.csprojResolveAssemblyReference.cache
 D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.Entities.Enum\obj\Debug\JinnHouse.Entities.Enum.dll
 D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.Entities.Enum\obj\Debug\JinnHouse.Entities.Enum.pdb
-D:\Work\SoftServe\JinnHouse\JinnHouse\JinnHouse.Entities.Enum\obj\Debug\JinnHouse.Entities.Enum.csprojResolveAssemblyReference.cache
